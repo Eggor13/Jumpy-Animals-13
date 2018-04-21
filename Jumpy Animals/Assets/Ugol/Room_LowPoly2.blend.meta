@@ -1,0 +1,176 @@
+fileFormatVersion: 2
+guid: 284ed54004a00594b8c499ead1e319dc
+timeCreated: 1522404375
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Barell
+    100002: Barell_001
+    100004: Cube
+    100006: Cylinder
+    100008: Hay
+    100010: Hay_1
+    100012: Hay_2
+    100014: Lamp
+    100016: Plane
+    100018: Polka
+    100020: Room
+    100022: //RootNode
+    100024: Table
+    100026: TV
+    100028: Wedro
+    400000: Barell
+    400002: Barell_001
+    400004: Cube
+    400006: Cylinder
+    400008: Hay
+    400010: Hay_1
+    400012: Hay_2
+    400014: Lamp
+    400016: Plane
+    400018: Polka
+    400020: Room
+    400022: //RootNode
+    400024: Table
+    400026: TV
+    400028: Wedro
+    2100000: Wood
+    2100002: Barell_Wood
+    2100004: Material
+    2100006: Hay_001
+    2100008: TV_Metall
+    2100010: TV_Wood
+    2100012: TV_Glass
+    2100014: Vedro_wood
+    2100016: Vedro_Iron
+    2100018: Polka_Wood
+    2100020: WoodTable
+    2100022: Lamp_Iron
+    2100024: Garage
+    2100026: Garage_Wood
+    2100028: Sky
+    2300000: Barell
+    2300002: Barell_001
+    2300004: Cube
+    2300006: Cylinder
+    2300008: Hay
+    2300010: Hay_1
+    2300012: Hay_2
+    2300014: Lamp
+    2300016: Plane
+    2300018: Polka
+    2300020: Room
+    2300022: Table
+    2300024: TV
+    2300026: Wedro
+    3300000: Barell
+    3300002: Barell_001
+    3300004: Cube
+    3300006: Cylinder
+    3300008: Hay
+    3300010: Hay_1
+    3300012: Hay_2
+    3300014: Lamp
+    3300016: Plane
+    3300018: Polka
+    3300020: Room
+    3300022: Table
+    3300024: TV
+    3300026: Wedro
+    4300000: Cylinder
+    4300002: Barell_001
+    4300004: Cube
+    4300006: Hay_1
+    4300008: Hay_2
+    4300010: Hay
+    4300012: TV
+    4300014: Wedro
+    4300016: Plane
+    4300018: Polka
+    4300020: Barell
+    4300022: Table
+    4300024: Lamp
+    4300026: Room
+    7400000: Default Take
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
