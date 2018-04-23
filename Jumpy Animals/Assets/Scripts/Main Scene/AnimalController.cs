@@ -19,10 +19,16 @@ public class AnimalController : MonoBehaviour {
 	Coroutine counter;
 	// Use this for initialization
 	void Start () 
+	{
+
+		anim = GetComponent<Animator> ();
+		if (anim == null)
 		{
-			anim = GetComponent<Animator> ();
-			Score.text = "0";
+			gameObject.SetActive(false);
+			Debug.LogError("EGOR!!!!! Set animator, please!!");
 		}
+		Score.text = "0";
+	}
 
 
 
@@ -47,11 +53,13 @@ public class AnimalController : MonoBehaviour {
 
 	public void LandingEvent()
 	{
+		Debug.Log("Landing");
 		// count score;
 		score+=15;
 		//display
 		Score.text = score.ToString();
 		//start count for loose;
+		Play = true;
 		counter = StartCoroutine(StartCount());
 		Rec.Stop ();
 	}
@@ -75,6 +83,9 @@ public class AnimalController : MonoBehaviour {
 	void gameOver()
 	{
 		Score.text = "GameOver";
+		if (PlayerPrefs.GetInt("HighScore")<score){
+		PlayerPrefs.SetInt("HighScore",score);
+		}
 		//stop input;
 		Play = false;
 		restart.SetActive (true);
@@ -84,7 +95,8 @@ public class AnimalController : MonoBehaviour {
 	{
 		if (counter!=null)
 		StopCoroutine(counter);
-		anim.SetInteger ("New Int", Random.Range (0, 7));
+		Play = false;
+		anim.SetInteger ("New Int", 2);//Random.Range (0, 7));
 		anim.SetTrigger("Jump");
 		Rec.Play ();
 
