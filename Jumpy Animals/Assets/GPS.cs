@@ -24,12 +24,10 @@
 
 public static class GPS
 {
-        public const string achievement_start_game = "CggImrTv0CcQAhAB"; // <GPGSID>
-        public const string achievement_collect_100_points = "CggImrTv0CcQAhAE"; // <GPGSID>
-        public const string achievement_collect_1000_points = "CggImrTv0CcQAhAF"; // <GPGSID>
-        public const string achievement_unlock_the_character = "CggImrTv0CcQAhAC"; // <GPGSID>
-        public const string achievement_watch_ads = "CggImrTv0CcQAhAD"; // <GPGSID>
-        public const string leaderboard_kings_of_the_jump = "CggImrTv0CcQAhAG"; // <GPGSID>
+        public const string achievement_start_game = "CgkI5KKt7ekZEAIQAQ"; // <GPGSID>
+        public const string achievement_collect_100_points = "CgkI5KKt7ekZEAIQAg"; // <GPGSID>
+        public const string achievement_collect_1000_points = "CgkI5KKt7ekZEAIQAw"; // <GPGSID>
+        public const string achievement_collect_10000_points = "CgkI5KKt7ekZEAIQBA"; // <GPGSID>
 
 }
 
