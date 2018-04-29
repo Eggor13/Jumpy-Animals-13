@@ -27,6 +27,7 @@ public static class GPS
         public const string achievement_start_game = "CgkI5KKt7ekZEAIQAQ"; // <GPGSID>
         public const string achievement_collect_100_points = "CgkI5KKt7ekZEAIQAg"; // <GPGSID>
         public const string achievement_collect_1000_points = "CgkI5KKt7ekZEAIQAw"; // <GPGSID>
+        public const string leaderboard_head_of_jumping = "CgkI5KKt7ekZEAIQBQ"; // <GPGSID>
         public const string achievement_collect_10000_points = "CgkI5KKt7ekZEAIQBA"; // <GPGSID>
 
 }

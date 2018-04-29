@@ -455,6 +455,7 @@ MonoBehaviour:
   Score: {fileID: 602669383}
   restart: {fileID: 1708251241}
   Rec: {fileID: 548514073}
+  AL: {fileID: 0}
 --- !u!82 &548514073
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1244,6 +1245,7 @@ MonoBehaviour:
   Score: {fileID: 602669383}
   restart: {fileID: 1708251241}
   Rec: {fileID: 885668443}
+  AL: {fileID: 0}
 --- !u!82 &885668443
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1630,6 +1632,7 @@ MonoBehaviour:
   Score: {fileID: 602669383}
   restart: {fileID: 1708251241}
   Rec: {fileID: 1039875927}
+  AL: {fileID: 0}
 --- !u!82 &1039875927
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1888,6 +1891,7 @@ MonoBehaviour:
   Score: {fileID: 602669383}
   restart: {fileID: 1708251241}
   Rec: {fileID: 1102833069}
+  AL: {fileID: 0}
 --- !u!1 &1103336017
 GameObject:
   m_ObjectHideFlags: 0
@@ -1921,7 +1925,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.52958584, y: 0.014057159}
+  m_AnchoredPosition: {x: 0.52958584, y: 0.014053345}
   m_SizeDelta: {x: 0.448452, y: -0.04301834}
   m_Pivot: {x: 0.4794932, y: 0.7460813}
 --- !u!114 &1103336019
@@ -2189,6 +2193,7 @@ MonoBehaviour:
   Score: {fileID: 602669383}
   restart: {fileID: 1708251241}
   Rec: {fileID: 0}
+  AL: {fileID: 0}
 --- !u!1 &1390869668
 GameObject:
   m_ObjectHideFlags: 0
@@ -2876,6 +2881,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1738617642}
+  - component: {fileID: 1738617643}
   m_Layer: 0
   m_Name: GPS
   m_TagString: Untagged
@@ -2889,13 +2895,24 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1738617641}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.06, y: -4.84, z: -6.56}
+  m_LocalRotation: {x: -0, y: -0, z: -4.6566123e-10, w: 1}
+  m_LocalPosition: {x: -3.0599995, y: -4.84, z: -6.5599995}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1738617643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1738617641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90d62bc5b15de3c4fb8d2ded661fdad8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1752232149
 GameObject:
   m_ObjectHideFlags: 0
@@ -3156,6 +3173,7 @@ GameObject:
   - component: {fileID: 1895437668}
   - component: {fileID: 1895437667}
   - component: {fileID: 1895437671}
+  - component: {fileID: 1895437672}
   m_Layer: 5
   m_Name: HomePlay
   m_TagString: Untagged
@@ -3322,6 +3340,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1895437672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1895437665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1254083943, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AspectMode: 2
+  m_AspectRatio: 2.4804866
 --- !u!1 &1911002007
 GameObject:
   m_ObjectHideFlags: 0
