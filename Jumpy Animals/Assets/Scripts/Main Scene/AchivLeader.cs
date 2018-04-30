@@ -42,7 +42,7 @@ public class AchivLeader : MonoBehaviour {
 
 
 
-	//if (выполняется условие) GetTheAchiv (ачивка);
+
 
 	//Рейтинг игроков
 
@@ -58,4 +58,8 @@ public class AchivLeader : MonoBehaviour {
 		Social.ShowLeaderboardUI ();
 	}
 
+	public void Exit()
+	{
+		PlayGamesPlatform.Instance.SignOut();
+	}
 }
