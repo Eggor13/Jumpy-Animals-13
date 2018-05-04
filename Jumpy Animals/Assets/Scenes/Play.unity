@@ -454,8 +454,8 @@ MonoBehaviour:
   Timer: 0.25
   Score: {fileID: 602669383}
   restart: {fileID: 1708251241}
-  Rec: {fileID: 548514073}
-  AL: {fileID: 0}
+  Rec: {fileID: 0}
+  Appodeall: {fileID: 766088437}
 --- !u!82 &548514073
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1068,6 +1068,7 @@ GameObject:
   - component: {fileID: 766088433}
   - component: {fileID: 766088432}
   - component: {fileID: 766088436}
+  - component: {fileID: 766088437}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1147,6 +1148,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 10162f932aebd244db6ed7cccd98d3bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &766088437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 766088431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 012fce3eba73be74ab1caa28f189db7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &786118302
@@ -1244,8 +1256,8 @@ MonoBehaviour:
   Timer: 0.25
   Score: {fileID: 602669383}
   restart: {fileID: 1708251241}
-  Rec: {fileID: 885668443}
-  AL: {fileID: 0}
+  Rec: {fileID: 0}
+  Appodeall: {fileID: 766088437}
 --- !u!82 &885668443
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1257,7 +1269,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: 7c316ef36bec48e4e94921241b501e11,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: ffc0cc6af86b1634bafca0c270925e43, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -1631,8 +1643,8 @@ MonoBehaviour:
   Timer: 0.25
   Score: {fileID: 602669383}
   restart: {fileID: 1708251241}
-  Rec: {fileID: 1039875927}
-  AL: {fileID: 0}
+  Rec: {fileID: 0}
+  Appodeall: {fileID: 766088437}
 --- !u!82 &1039875927
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1887,11 +1899,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7ce70b78861521439861cff60e0ea1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Timer: 0.1
+  Timer: 0.25
   Score: {fileID: 602669383}
   restart: {fileID: 1708251241}
-  Rec: {fileID: 1102833069}
-  AL: {fileID: 0}
+  Rec: {fileID: 0}
+  Appodeall: {fileID: 766088437}
 --- !u!1 &1103336017
 GameObject:
   m_ObjectHideFlags: 0
@@ -2193,7 +2205,7 @@ MonoBehaviour:
   Score: {fileID: 602669383}
   restart: {fileID: 1708251241}
   Rec: {fileID: 0}
-  AL: {fileID: 0}
+  Appodeall: {fileID: 766088437}
 --- !u!1 &1390869668
 GameObject:
   m_ObjectHideFlags: 0
@@ -2684,7 +2696,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 100, y: 100, z: 1}
+  m_Size: {x: 50, y: 50, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1708251245
 MonoBehaviour:
@@ -2873,46 +2885,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1716139792}
   m_Mesh: {fileID: 4300014, guid: 284ed54004a00594b8c499ead1e319dc, type: 3}
---- !u!1 &1738617641
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1738617642}
-  - component: {fileID: 1738617643}
-  m_Layer: 0
-  m_Name: GPS
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1738617642
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1738617641}
-  m_LocalRotation: {x: -0, y: -0, z: -4.6566123e-10, w: 1}
-  m_LocalPosition: {x: -3.0599995, y: -4.84, z: -6.5599995}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1738617643
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1738617641}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90d62bc5b15de3c4fb8d2ded661fdad8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1752232149
 GameObject:
   m_ObjectHideFlags: 0
@@ -3210,7 +3182,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 55, y: 20, z: 1}
+  m_Size: {x: 70, y: 40, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1895437668
 MonoBehaviour:

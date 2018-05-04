@@ -16,7 +16,7 @@ public class AnimalController : MonoBehaviour {
 	public GameObject restart;
 	public AudioSource Rec;
 	AudioSource audioSource;
-	public AchivLeader AL;
+	public AppoD Appodeall;
 
 
 	bool Play = true;
@@ -87,18 +87,12 @@ public class AnimalController : MonoBehaviour {
 	/// </summary>
 	void gameOver()
 	{
-		Score.text = "GameOver"; 
+		Score.text = "GameOver"; Appodeall.Interstitial ();
 		if (PlayerPrefs.GetInt("HighScore")<score)
 		{
-			//ачивки
-			if (score >= 100)
-				AL.GetTheAchiv (AchivLeader.achiv_100);
-			if (score >= 1000)
-				AL.GetTheAchiv (AchivLeader.achiv_1000);
-			if (score >= 10000)
-				AL.GetTheAchiv (AchivLeader.achiv_10000);
-			//
 		PlayerPrefs.SetInt("HighScore",score);
+
+			
 
 	
 		}
@@ -113,7 +107,7 @@ public class AnimalController : MonoBehaviour {
 		StopCoroutine(counter);
 		Play = false;
 		anim.SetInteger ("New Int", Random.Range (0, 7));//Random.Range (0, 7));
-		anim.SetTrigger("Jump"); AL.GetTheAchiv (AchivLeader.achiv_StartGame);
+		anim.SetTrigger("Jump"); 
 		Rec.Play ();
 
 
