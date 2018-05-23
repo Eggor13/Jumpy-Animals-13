@@ -87,18 +87,24 @@ public class AnimalController : MonoBehaviour {
 	/// </summary>
 	void gameOver()
 	{
-		Score.text = "GameOver"; Appodeall.Interstitial ();
+		Score.text = "GameOver"; 
 		if (PlayerPrefs.GetInt("HighScore")<score)
 		{
 		PlayerPrefs.SetInt("HighScore",score);
 
-			
-
-	
 		}
+
 		//stop input;
 		Play = false;
 		restart.SetActive (true);
+
+		int GOCounts = PlayerPrefs.GetInt ("GameoverCount");
+		if (GOCounts % 5 == 0) {
+			
+			Appodeall.Interstitial ();
+		}
+		GOCounts++;
+		PlayerPrefs.SetInt ("GameoverCount", GOCounts);
 	}
 
 	void SetJump()

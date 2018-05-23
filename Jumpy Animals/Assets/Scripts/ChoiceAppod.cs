@@ -8,7 +8,10 @@ public class ChoiceAppod : MonoBehaviour {
 
 	void Start () 
 	{
-		ChoiceCharacter.Banner (AppoD != null);
+		if (ChoiceCharacter!= null)
+		{
+			ChoiceCharacter.Banner ();
+		}
 	}
 
 }
