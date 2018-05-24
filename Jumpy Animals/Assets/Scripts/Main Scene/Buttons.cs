@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+
 public class Buttons : MonoBehaviour {
 
 	public Sprite mus_on, mus_off;
@@ -56,7 +57,7 @@ public class Buttons : MonoBehaviour {
 			
 
 		case "Yes":
-			Application.LoadLevel ("Main");
+			Application.LoadLevel ("Play");
 			break;
 
 
@@ -64,9 +65,6 @@ public class Buttons : MonoBehaviour {
 			Application.OpenURL ("http://google.com");
 			break;
 
-		case "Share":
-			Application.OpenURL ("http://unity3d.ru/distribution/viewtopic.php?f=105&t=7495");
-			break;
 		case "Sound":
 
 			if (PlayerPrefs.GetString ("Sound") == "off") { //Play music now

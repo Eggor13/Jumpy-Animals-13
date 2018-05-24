@@ -3,7 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
+
 public class AnimalController : MonoBehaviour {
+	
+
 
 	Animator anim;
 	public float Timer = 1f;
@@ -12,6 +16,7 @@ public class AnimalController : MonoBehaviour {
 	public GameObject restart;
 	public AudioSource Rec;
 	AudioSource audioSource;
+	public AppoD Appodeall;
 
 
 	bool Play = true;
@@ -20,14 +25,14 @@ public class AnimalController : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
-
 		anim = GetComponent<Animator> ();
 		if (anim == null)
 		{
 			gameObject.SetActive(false);
 			Debug.LogError("EGOR!!!!! Set animator, please!!");
 		}
-		Score.text = "0";
+		Score.text = "0"; 
+
 	}
 
 
@@ -35,20 +40,20 @@ public class AnimalController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (Play){
-		#if UNITY_EDITOR
-		if (Input.GetKeyDown(KeyCode.Mouse0))
-		{
-			SetJump();
-		}
-		#else
+		if (Play) {
+			#if UNITY_EDITOR
+			if (Input.GetKeyDown (KeyCode.Mouse0)) {
+				SetJump ();
+			}
+			#else
 			if (Input.touchCount>0 && Input.GetTouch(0).phase == TouchPhase.Began)
 		{
 		SetJump();
 		}
-		#endif
+			#endif
 		}
 	}
+		
 
 
 	public void LandingEvent()
@@ -82,13 +87,24 @@ public class AnimalController : MonoBehaviour {
 	/// </summary>
 	void gameOver()
 	{
-		Score.text = "GameOver";
-		if (PlayerPrefs.GetInt("HighScore")<score){
+		Score.text = "GameOver"; 
+		if (PlayerPrefs.GetInt("HighScore")<score)
+		{
 		PlayerPrefs.SetInt("HighScore",score);
+
 		}
+
 		//stop input;
 		Play = false;
 		restart.SetActive (true);
+
+		int GOCounts = PlayerPrefs.GetInt ("GameoverCount");
+		if (GOCounts % 5 == 0) {
+			
+			Appodeall.Interstitial ();
+		}
+		GOCounts++;
+		PlayerPrefs.SetInt ("GameoverCount", GOCounts);
 	}
 
 	void SetJump()
@@ -96,10 +112,14 @@ public class AnimalController : MonoBehaviour {
 		if (counter!=null)
 		StopCoroutine(counter);
 		Play = false;
-		anim.SetInteger ("New Int", 2);//Random.Range (0, 7));
-		anim.SetTrigger("Jump");
+		anim.SetInteger ("New Int", Random.Range (0, 7));//Random.Range (0, 7));
+		anim.SetTrigger("Jump"); 
 		Rec.Play ();
 
 
 	}
 }
+
+
+
+
