@@ -594,6 +594,7 @@ GameObject:
   - component: {fileID: 232833484}
   - component: {fileID: 232833483}
   - component: {fileID: 232833488}
+  - component: {fileID: 232833489}
   m_Layer: 5
   m_Name: Mail
   m_TagString: Untagged
@@ -644,8 +645,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 127, y: 126, z: 1}
-  m_Center: {x: 62, y: 60, z: 0}
+  m_Size: {x: 40, y: 40, z: 1}
+  m_Center: {x: 14.6, y: 14.6, z: 0}
 --- !u!114 &232833485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -772,6 +773,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!65 &232833489
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 232833481}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 40, y: 40, z: 1}
+  m_Center: {x: 14.6, y: 14.6, z: 0}
 --- !u!1001 &279796271
 Prefab:
   m_ObjectHideFlags: 0
@@ -1720,8 +1733,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 127, y: 126, z: 1}
-  m_Center: {x: 62, y: 60, z: 0}
+  m_Size: {x: 40, y: 40, z: 1}
+  m_Center: {x: 14.6, y: 14.6, z: 0}
 --- !u!114 &401900537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3918,7 +3931,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 5, y: 58.600002}
+  m_AnchoredPosition: {x: 5, y: 58.6}
   m_SizeDelta: {x: -11.057219, y: -10.99}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &2016270827
@@ -3946,8 +3959,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 127, y: 126, z: 1}
-  m_Center: {x: 62, y: 60, z: 0}
+  m_Size: {x: 40, y: 40, z: 1}
+  m_Center: {x: 14.6, y: 14.6, z: 0}
 --- !u!114 &2016270829
 MonoBehaviour:
   m_ObjectHideFlags: 0
