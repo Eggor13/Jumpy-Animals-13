@@ -543,6 +543,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7ce70b78861521439861cff60e0ea1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  logingStuff: 0
   Timer: 0.15
   Score: {fileID: 602669383}
   restart: {fileID: 1708251241}
@@ -1603,6 +1604,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7ce70b78861521439861cff60e0ea1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  logingStuff: 1
   Timer: 0.15
   Score: {fileID: 602669383}
   restart: {fileID: 1708251241}
@@ -2138,6 +2140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7ce70b78861521439861cff60e0ea1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  logingStuff: 0
   Timer: 0.15
   Score: {fileID: 602669383}
   restart: {fileID: 1708251241}
@@ -2315,6 +2318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7ce70b78861521439861cff60e0ea1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  logingStuff: 0
   Timer: 0.15
   Score: {fileID: 602669383}
   restart: {fileID: 1708251241}
@@ -2809,6 +2813,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7ce70b78861521439861cff60e0ea1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  logingStuff: 0
   Timer: 0.15
   Score: {fileID: 602669383}
   restart: {fileID: 1708251241}

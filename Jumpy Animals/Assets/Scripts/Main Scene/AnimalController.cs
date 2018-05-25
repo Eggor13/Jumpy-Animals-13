@@ -19,6 +19,8 @@ public class AnimalController : MonoBehaviour {
 	public AppoD Appodeall;
 	public VideoTimer video;
 
+
+	bool GameOver = false;
 	bool Play = true;
 
 	Coroutine counter;
@@ -40,17 +42,21 @@ public class AnimalController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		if (!GameOver){
 		if (Play) {
 			#if UNITY_EDITOR
 			if (Input.GetKeyDown (KeyCode.Mouse0)) {
+					Play = false;
 				SetJump ();
 			}
 			#else
 			if (Input.touchCount>0 && Input.GetTouch(0).phase == TouchPhase.Began)
 		{
+				Play = false;
 		SetJump();
 		}
 			#endif
+		}
 		}
 	}
 		
@@ -62,13 +68,11 @@ public class AnimalController : MonoBehaviour {
 		{
 			Debug.Log("Landing");
 		}
-
-		// count score;
-		score+=15;
 		//display
 		Score.text = score.ToString();
 		//start count for loose;
 		Play = true;
+		anim.ResetTrigger("Jump");
 		counter = StartCoroutine(StartCount());
 		if (Rec != null)
 		Rec.Stop ();
@@ -96,6 +100,7 @@ public class AnimalController : MonoBehaviour {
 	/// </summary>
 	void gameOver()
 	{
+		GameOver = true;
 		if (logingStuff)
 		{
 			Debug.Log("GameOver");
@@ -132,12 +137,15 @@ public class AnimalController : MonoBehaviour {
 				Debug.Log("Stop Corotine");
 			}
 		}
-		Play = false;
+
+		// count score;
+		score+=15;
 		if (logingStuff)
 		{
 			Debug.Log("Stop Corotine");
 		}
 		anim.SetInteger ("New Int", Random.Range (0, 7));//Random.Range (0, 7));
+		//anim.SetInteger ("New Int", 6);
 		anim.SetTrigger("Jump"); 
 		if (Rec != null)
 		Rec.Play ();
