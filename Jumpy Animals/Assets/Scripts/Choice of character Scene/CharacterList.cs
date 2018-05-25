@@ -9,6 +9,8 @@ public class CharacterList : MonoBehaviour {
 
 	private int index;
 
+	public List<GameObject> ApplyPets = new List<GameObject>();
+
 	private void Start()
 	{
 		index = PlayerPrefs.GetInt ("CharacterSelected");
@@ -50,7 +52,10 @@ public class CharacterList : MonoBehaviour {
 	}
 	public void ConfirmButton()
 	{
-		PlayerPrefs.SetInt ("CharacterSelected", index);
-		SceneManager.LoadScene ("Play");
+		Debug.Log(characterList [index].name);
+		if (ApplyPets.Contains(characterList [index]) && characterList [index].activeInHierarchy){
+			PlayerPrefs.SetInt ("CharacterSelected", index);
+			SceneManager.LoadScene ("Play");
+		}
 	}
 }

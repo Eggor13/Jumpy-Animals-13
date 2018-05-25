@@ -17,7 +17,7 @@ public class AnimalController : MonoBehaviour {
 	public AudioSource Rec;
 	AudioSource audioSource;
 	public AppoD Appodeall;
-
+	public VideoTimer video;
 
 	bool Play = true;
 
@@ -66,6 +66,7 @@ public class AnimalController : MonoBehaviour {
 		//start count for loose;
 		Play = true;
 		counter = StartCoroutine(StartCount());
+		if (Rec != null)
 		Rec.Stop ();
 	}
 
@@ -97,6 +98,8 @@ public class AnimalController : MonoBehaviour {
 		//stop input;
 		Play = false;
 		restart.SetActive (true);
+		if (video != null)
+		video.gameObject.SetActive(true);
 
 		int GOCounts = PlayerPrefs.GetInt ("GameoverCount");
 		if (GOCounts % 5 == 0) {
@@ -114,6 +117,7 @@ public class AnimalController : MonoBehaviour {
 		Play = false;
 		anim.SetInteger ("New Int", Random.Range (0, 7));//Random.Range (0, 7));
 		anim.SetTrigger("Jump"); 
+		if (Rec != null)
 		Rec.Play ();
 
 
