@@ -29,9 +29,6 @@ public class AppoD : MonoBehaviour {
 
 	}
 
-	public void onRewardedVideoFinished(int amount, string name) { print("Reward: " + amount + " " + name); }
-
-
 	public void Banner ()
 	{
 		Appodeal.show(Appodeal.BANNER_BOTTOM);

@@ -81,7 +81,7 @@ ModelImporter:
     2100002: Orange
     2100004: Blak
     4300000: Cylinder
-    7400000: Idle Dog
+    7400000: Armature|ArmatureAction
     9500000: //RootNode
     13700000: Cylinder
   externalObjects: {}
@@ -112,7 +112,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Idle Dog
+      name: Armature|ArmatureAction
       takeName: Armature|ArmatureAction
       firstFrame: 0
       lastFrame: 8
