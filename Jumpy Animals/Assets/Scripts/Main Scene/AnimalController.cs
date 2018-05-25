@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class AnimalController : MonoBehaviour {
 	
 
-
+	public bool logingStuff;
 	Animator anim;
 	public float Timer = 1f;
 	int score;
@@ -58,7 +58,11 @@ public class AnimalController : MonoBehaviour {
 
 	public void LandingEvent()
 	{
-		Debug.Log("Landing");
+		if (logingStuff)
+		{
+			Debug.Log("Landing");
+		}
+
 		// count score;
 		score+=15;
 		//display
@@ -73,6 +77,10 @@ public class AnimalController : MonoBehaviour {
 	IEnumerator StartCount()
 	{
 		yield return null;
+		if (logingStuff)
+		{
+			Debug.Log("StartCoroutine");
+		}
 		for (float timer = 0; timer < Timer; timer+=Time.deltaTime)
 		{
 			yield return new WaitForSeconds(Time.deltaTime);
@@ -88,6 +96,10 @@ public class AnimalController : MonoBehaviour {
 	/// </summary>
 	void gameOver()
 	{
+		if (logingStuff)
+		{
+			Debug.Log("GameOver");
+		}
 		Score.text = "GameOver"; 
 		if (PlayerPrefs.GetInt("HighScore")<score)
 		{
@@ -112,9 +124,19 @@ public class AnimalController : MonoBehaviour {
 
 	void SetJump()
 	{
-		if (counter!=null)
-		StopCoroutine(counter);
+		
+		if (counter!=null){
+			StopCoroutine(counter);
+			if (logingStuff)
+			{
+				Debug.Log("Stop Corotine");
+			}
+		}
 		Play = false;
+		if (logingStuff)
+		{
+			Debug.Log("Stop Corotine");
+		}
 		anim.SetInteger ("New Int", Random.Range (0, 7));//Random.Range (0, 7));
 		anim.SetTrigger("Jump"); 
 		if (Rec != null)
