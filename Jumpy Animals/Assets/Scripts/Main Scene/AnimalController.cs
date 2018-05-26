@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class AnimalController : MonoBehaviour {
 	
 
-
+	public bool logingStuff;
 	Animator anim;
 	public float Timer = 1f;
 	int score;
@@ -19,6 +19,8 @@ public class AnimalController : MonoBehaviour {
 	public AppoD Appodeall;
 	public VideoTimer video;
 
+
+	bool GameOver = false;
 	bool Play = true;
 
 	Coroutine counter;
@@ -40,17 +42,21 @@ public class AnimalController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		if (!GameOver){
 		if (Play) {
 			#if UNITY_EDITOR
 			if (Input.GetKeyDown (KeyCode.Mouse0)) {
+					Play = false;
 				SetJump ();
 			}
 			#else
 			if (Input.touchCount>0 && Input.GetTouch(0).phase == TouchPhase.Began)
 		{
+				Play = false;
 		SetJump();
 		}
 			#endif
+		}
 		}
 	}
 		
@@ -58,13 +64,15 @@ public class AnimalController : MonoBehaviour {
 
 	public void LandingEvent()
 	{
-		Debug.Log("Landing");
-		// count score;
-		score+=15;
+		if (logingStuff)
+		{
+			Debug.Log("Landing");
+		}
 		//display
 		Score.text = score.ToString();
 		//start count for loose;
 		Play = true;
+		anim.ResetTrigger("Jump");
 		counter = StartCoroutine(StartCount());
 		if (Rec != null)
 		Rec.Stop ();
@@ -73,6 +81,10 @@ public class AnimalController : MonoBehaviour {
 	IEnumerator StartCount()
 	{
 		yield return null;
+		if (logingStuff)
+		{
+			Debug.Log("StartCoroutine");
+		}
 		for (float timer = 0; timer < Timer; timer+=Time.deltaTime)
 		{
 			yield return new WaitForSeconds(Time.deltaTime);
@@ -88,6 +100,11 @@ public class AnimalController : MonoBehaviour {
 	/// </summary>
 	void gameOver()
 	{
+		GameOver = true;
+		if (logingStuff)
+		{
+			Debug.Log("GameOver");
+		}
 		Score.text = "GameOver"; 
 		if (PlayerPrefs.GetInt("HighScore")<score)
 		{
@@ -112,10 +129,23 @@ public class AnimalController : MonoBehaviour {
 
 	void SetJump()
 	{
-		if (counter!=null)
-		StopCoroutine(counter);
-		Play = false;
+		
+		if (counter!=null){
+			StopCoroutine(counter);
+			if (logingStuff)
+			{
+				Debug.Log("Stop Corotine");
+			}
+		}
+
+		// count score;
+		score+=15;
+		if (logingStuff)
+		{
+			Debug.Log("Stop Corotine");
+		}
 		anim.SetInteger ("New Int", Random.Range (0, 7));//Random.Range (0, 7));
+		//anim.SetInteger ("New Int", 6);
 		anim.SetTrigger("Jump"); 
 		if (Rec != null)
 		Rec.Play ();
